@@ -12,7 +12,8 @@ app.use(express.json())
 const allowedOrigins = [
   'https://imagify-ai-saasl.vercel.app',
   'http://localhost:5173',               
-  'http://localhost:3000'                
+  'http://localhost:3000',
+  'https://genai-og.vercel.app'                
 ];
 
 app.use(cors({
