@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { assets, plans } from "../assets/assets";
+import { assets, plans } from "../../public/assets/assets";
 import { AppContext } from "../context/AppContext";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
@@ -10,7 +10,7 @@ const BuyCredit = () => {
   const { user, backendUrl, loadCreditsData, token, setshowLogin } =
     useContext(AppContext);
   const navigate = useNavigate();
-//Razorpay checkout modal
+  //Razorpay checkout modal
   const initpay = async (order) => {
     if (!window.Razorpay) {
       alert("Razorpay SDK not loaded. Please refresh.");
@@ -25,14 +25,14 @@ const BuyCredit = () => {
       order_id: order.id,
       receipt: order.receipt,
       handler: async (response) => {
-        try{
-          const{data}=await axios.post(backendUrl+'/api/user/verify-razor',response,{headers:{token}})
-          if(data.success){
+        try {
+          const { data } = await axios.post(backendUrl + '/api/user/verify-razor', response, { headers: { token } })
+          if (data.success) {
             loadCreditsData();
             navigate('/')
             toast.success("Credit Added")
           }
-        }catch(error){
+        } catch (error) {
           toast.error(error.message)
         }
       }

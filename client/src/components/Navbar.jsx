@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { assets } from "../assets/assets";
+import { assets } from "../../public/assets/assets";
 import { Link, useNavigate } from "react-router-dom";
 import { AppContext } from "../context/AppContext";
 import { motion } from "framer-motion";
@@ -28,7 +28,7 @@ const Navbar = () => {
               Hi,{" "}
               {user.name
                 ? user.name.split(" ")[0].charAt(0).toUpperCase() +
-                  user.name.split(" ")[0].slice(1).toLowerCase()
+                user.name.split(" ")[0].slice(1).toLowerCase()
                 : ""}
             </p>
             <div className="relative group">

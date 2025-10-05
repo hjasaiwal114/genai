@@ -1,5 +1,5 @@
 import React from "react";
-import { assets } from "../assets/assets";
+import { assets } from "../../public/assets/assets";
 
 function Footer() {
   return (
@@ -21,14 +21,14 @@ function Footer() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img src={assets.twitter_icon} alt="" width={30} /> 
+          <img src={assets.twitter_icon} alt="" width={30} />
         </a>
         <a
           href="https://www.instagram.com/sanskar0627"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img src={assets.instagram_icon} alt="" width={31} /> 
+          <img src={assets.instagram_icon} alt="" width={31} />
         </a>
       </div>
     </div>

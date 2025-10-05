@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import { assets } from "../assets/assets";
+import { assets } from "../../public/assets/assets";
 import { AppContext } from "../context/AppContext";
 import { motion } from "framer-motion";
 import axios from "axios";
@@ -62,12 +62,12 @@ const Login = () => {
       console.log(error);
       toast.error(
         error?.response?.data?.message ||
-          error.message ||
-          "Something went wrong"
+        error.message ||
+        "Something went wrong"
       );
     }
   };
-//lock the background scroll
+  //lock the background scroll
   useEffect(() => {
     document.body.style.overflow = "hidden";
     return () => {

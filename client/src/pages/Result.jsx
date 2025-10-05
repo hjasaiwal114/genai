@@ -1,5 +1,5 @@
 import React, { useState, useContext } from "react";
-import { assets } from "../assets/assets";
+import { assets } from "../../public/assets/assets";
 import { motion } from "framer-motion";
 import { AppContext } from "../context/AppContext";
 
@@ -44,9 +44,8 @@ const Result = () => {
           />
 
           <span
-            className={`absolute bottom-0 left-0 h-1 bg-blue-500 ${
-              loading ? "w-full transition-all duration-[10s]" : "w-0"
-            }  `}
+            className={`absolute bottom-0 left-0 h-1 bg-blue-500 ${loading ? "w-full transition-all duration-[10s]" : "w-0"
+              }  `}
           />
         </div>
         <p className={!loading ? "hidden" : ""}>Loading...</p>
