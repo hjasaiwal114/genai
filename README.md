@@ -132,9 +132,10 @@ Full Stack Developer | DSA Learner | Passionate Builder
 
 ## 📃 License
 
-SANSKAR SHUKLA
+HIMANSHU JASAIWAL
 
 ---
 
 > If something doesn't work, just skip that part and enjoy the rest! The setup is clean and easy—get creative and make it yours.
+
 # genai
